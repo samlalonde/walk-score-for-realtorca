@@ -121,7 +121,7 @@ function fetchWalkScore(address, lat, lon) {
     chrome.storage.sync.get('walkScoreApiKey', function (data) {
         if (data.walkScoreApiKey) {
             const apiKey = data.walkScoreApiKey;
-            // const walkScoreUrl = `https://api.walkscore.com/score?format=json&address=${encodeURIComponent(address)}&lat=${lat}&lon=${lon}&transit=1&bike=1&wsapikey=${apiKey}`;
+            const walkScoreUrl = `https://api.walkscore.com/score?format=json&address=${encodeURIComponent(address)}&lat=${lat}&lon=${lon}&transit=1&bike=1&wsapikey=${apiKey}`;
 
             // console.log("Walk Score API URL:", walkScoreUrl);
 
