@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Walk Score® for REALTOR.ca</title>
+    <style>
+        body {
+            width: 750px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #apiKeyInput {
+            margin-bottom: 20px;
+        }
+
+        #apiKeyInput input {
+            width: calc(100% - 90px);
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        #apiKeyInput button {
+            padding: 5px 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Walk Score® for REALTOR.ca</h2>
+    <div id="apiKeyInput" style="display:none;">
+        <input type="text" id="apiKey" placeholder="Enter your Walk Score API key">
+        <button id="saveKey">Save</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>Listing</th>
+                <th>Median Score</th>
+                <th>Walk Score</th>
+                <th>Bike Score</th>
+                <th>Transit Score</th>
+                <th>Map</th>
+            </tr>
+        </thead>
+        <tbody id="scores"></tbody>
+    </table>
+    <script src="popup.js"></script>
+</body>
+
+</html>
